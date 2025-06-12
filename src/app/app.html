@@ -1,0 +1,28 @@
+<main>
+  <app-learning-resources />
+
+  <hr />
+
+  <app-auth />
+
+  <!-- <ng-template>
+    <p appRoleControl="admin">Only for admins</p>
+  </ng-template>
+
+  <p *appRoleControl="'admin'">Only for admins</p>
+    @if(isAdmin()){
+  <p>Only show for admins</p>
+  } -->
+
+  <p *appRoleControl="'admin'" class="protected-content admin">
+    Only for admins
+  </p>
+  <p *appRoleControl="'user'" class="protected-content unauthenticated">
+    Only for users
+  </p>
+  <p *appRoleControl="'guest'" class="protected-content authenticated">
+    Only Guest users
+  </p>
+</main>
+
+<router-outlet />
