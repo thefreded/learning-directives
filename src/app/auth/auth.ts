@@ -9,8 +9,8 @@ import { AuthHelper } from './auth-helper';
   styleUrl: './auth.css',
 })
 export class Auth {
-  email = signal('');
-  password = signal('');
+  protected email = signal('');
+  protected password = signal('');
   #authHelper = inject(AuthHelper);
 
   onSubmit() {

@@ -14,5 +14,7 @@ import { RoleControl } from './auth/role-control';
 export class App {
   #authHelper = inject(AuthHelper);
 
-  isAdmin = computed(() => this.#authHelper.activePermission() === 'admin');
+  protected isAdmin = computed(
+    () => this.#authHelper.activePermission() === 'admin'
+  );
 }
