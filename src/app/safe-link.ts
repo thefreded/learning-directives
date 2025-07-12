@@ -11,7 +11,7 @@ export class SafeLink {
     alias: 'appSafeLink',
   });
 
-  private hostlementRef = inject<ElementRef<HTMLAnchorElement>>(ElementRef);
+  private hostElementRef = inject<ElementRef<HTMLAnchorElement>>(ElementRef);
   constructor() {
     console.log('safe link is active');
   }
